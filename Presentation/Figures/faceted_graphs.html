@@ -4,232 +4,195 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/assets/css/just-the-docs-default.css">
-    <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script>
-  <script type="text/javascript" src="/assets/js/just-the-docs.js"></script>
+  <link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet">
+  <style id="jtd-nav-activation">
+    .site-nav > ul.nav-list:first-child > li > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li:not(:nth-child(10)) > a,
+    .site-nav > ul.nav-list:first-child > li > ul > li > ul > li > ul > li a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-list:not(:first-child) a,
+    .site-nav li.external a {
+      background-image: none;
+    }
+    .site-nav > ul.nav-list:first-child > li:nth-child(5) > ul > li:nth-child(1) > ul > li:nth-child(10) > a {
+      font-weight: 600;
+      text-decoration: none;
+    }.site-nav > ul.nav-list:first-child > li:nth-child(5) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(5) > ul > li:nth-child(1) > button svg,
+    .site-nav > ul.nav-list:first-child > li:nth-child(5) > ul > li:nth-child(1) > ul > li:nth-child(10) > button svg {
+      transform: rotate(-90deg);
+    }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(5) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(5) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list,
+    .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(5) > ul.nav-list > li.nav-list-item:nth-child(1) > ul.nav-list > li.nav-list-item:nth-child(10) > ul.nav-list {
+      display: block;
+    }
+  </style>
+    <script src="/assets/js/vendor/lunr.min.js"></script>
+  <script src="/assets/js/just-the-docs.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Faceted Graphs | LOST</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.4.0" />
 <meta property="og:title" content="Faceted Graphs" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:site_name" content="LOST" />
 <script type="application/ld+json">
-{"@type":"WebPage","headline":"Faceted Graphs","url":"/Presentation/Figures/faceted_graphs.html","@context":"https://schema.org"}</script>
+{"url":"/Presentation/Figures/faceted_graphs.html","@type":"WebPage","headline":"Faceted Graphs","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 </head>
 <body>
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="svg-link" viewBox="0 0 24 24">
-      <title>Link</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
-    </symbol>
-    <symbol id="svg-search" viewBox="0 0 24 24">
-      <title>Search</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-    </symbol>
-    <symbol id="svg-menu" viewBox="0 0 24 24">
-      <title>Menu</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </symbol>
-    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-      <title>Expand</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </symbol>
-    <symbol id="svg-doc" viewBox="0 0 24 24">
-      <title>Document</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
-        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
-      </svg>
-    </symbol>
+  <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  <symbol id="svg-link" viewBox="0 0 24 24">
+  <title>Link</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
+    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
   </svg>
-  <div class="side-bar">
-    <div class="site-header">
-      <a href="/" class="site-title lh-tight">
+</symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+  <title>Menu</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+    <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+</symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+  <title>Expand</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</symbol>
+  <!-- Feather. MIT License: https://github.com/feathericons/feather/blob/master/LICENSE -->
+<symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link">
+  <title id="svg-external-link-title">(external link)</title>
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line>
+</symbol>
+    <symbol id="svg-doc" viewBox="0 0 24 24">
+  <title>Document</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+    <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
+  </svg>
+</symbol>
+    <symbol id="svg-search" viewBox="0 0 24 24">
+  <title>Search</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+  </svg>
+</symbol>
+    <!-- Bootstrap Icons. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-copy" viewBox="0 0 16 16">
+  <title>Copy</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+  </svg>
+</symbol>
+<symbol id="svg-copied" viewBox="0 0 16 16">
+  <title>Copied</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+  </svg>
+</symbol>
+</svg>
+    <div class="side-bar">
+  <div class="site-header" role="banner">
+    <a href="/" class="site-title lh-tight">
   LOST
 </a>
-      <a href="#" id="menu-button" class="site-button">
-        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
-      </a>
-    </div>
-    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-      <ul class="nav-list"><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Data_Manipulation/data_manipulation.html" class="nav-list-link">Data Manipulation</a><ul class="nav-list "><li class="nav-list-item "><a href="/Data_Manipulation/Regular_Expressions.html" class="nav-list-link">Regular Expressions</a></li><li class="nav-list-item "><a href="/Data_Manipulation/collapse_a_data_set.html" class="nav-list-link">Collapse a Data Set</a></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Data_Manipulation/Combining_Datasets/combining_datasets_overview.html" class="nav-list-link">Combining Datasets</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Data_Manipulation/Combining_Datasets/combining_datasets_vertical_combination.html" class="nav-list-link">Vertical Combination</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Data_Manipulation/Combining_Datasets/combining_datasets_horizontal_merge_deterministic.html" class="nav-list-link">Horizontal Combination (Deterministic)</a>
-                      </li></ul></li><li class="nav-list-item "><a href="/Data_Manipulation/creating_a_variable_with_group_calculations.html" class="nav-list-link">Creating a Variable with Group Calculations</a></li><li class="nav-list-item "><a href="/Data_Manipulation/creating_categorical_variables.html" class="nav-list-link">Creating Categorical Variables</a></li><li class="nav-list-item "><a href="/Data_Manipulation/Creating_Dummy_Variables/creating_dummy_variables.html" class="nav-list-link">Creating Dummy Variables</a></li><li class="nav-list-item "><a href="/Data_Manipulation/determine_the_observation_level_of_a_data_set.html" class="nav-list-link">Determine the Observation Level of a Data Set</a></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Data_Manipulation/Reshaping/reshape.html" class="nav-list-link">Reshaping Data</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Data_Manipulation/Reshaping/reshape_panel_data_from_wide_to_long.html" class="nav-list-link">Reshape Panel Data from Wide to Long</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Data_Manipulation/Reshaping/reshape_panel_data_from_long_to_wide.html" class="nav-list-link">Reshape Panel Data from Long to Wide</a>
-                      </li></ul></li><li class="nav-list-item "><a href="/Data_Manipulation/rowwise_calculations.html" class="nav-list-link">Rowwise Calculations</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Geo-Spatial/Geo-spatial.html" class="nav-list-link">Geo-Spatial</a><ul class="nav-list "><li class="nav-list-item "><a href="/Geo-Spatial/choropleths.html" class="nav-list-link">Choropleths</a></li><li class="nav-list-item "><a href="/Geo-Spatial/geocoding.html" class="nav-list-link">Geocoding</a></li><li class="nav-list-item "><a href="/Geo-Spatial/handling_raster_data.html" class="nav-list-link">Handling Raster Data</a></li><li class="nav-list-item "><a href="/Geo-Spatial/merging_shape_files.html" class="nav-list-link">Merging Shape Files</a></li><li class="nav-list-item "><a href="/Geo-Spatial/spatial_joins.html" class="nav-list-link">Spatial Joins</a></li><li class="nav-list-item "><a href="/Geo-Spatial/spatial_lag_model.html" class="nav-list-link">Spatial Lag Model</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Machine_Learning/Machine_Learning.html" class="nav-list-link">Machine Learning</a><ul class="nav-list "><li class="nav-list-item "><a href="/Machine_Learning/Nearest_Neighbor.html" class="nav-list-link">K-Nearest Neighbor Matching</a></li><li class="nav-list-item "><a href="/Machine_Learning/artificial_neural_network.html" class="nav-list-link">Artificial Neural Network</a></li><li class="nav-list-item "><a href="/Machine_Learning/boosted_regression_trees.html" class="nav-list-link">Boosted Regression Trees</a></li><li class="nav-list-item "><a href="/Machine_Learning/causal_forest.html" class="nav-list-link">Causal Forest</a></li><li class="nav-list-item "><a href="/Machine_Learning/decision_trees.html" class="nav-list-link">Decision Trees</a></li><li class="nav-list-item "><a href="/Machine_Learning/penalized_regression.html" class="nav-list-link">Penalized Regression</a></li><li class="nav-list-item "><a href="/Machine_Learning/random_forest.html" class="nav-list-link">Random Forest</a></li><li class="nav-list-item "><a href="/Machine_Learning/support_vector_machine.html" class="nav-list-link">Support Vector Machine</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Model_Estimation/Model_Estimation.html" class="nav-list-link">Model Estimation</a><ul class="nav-list "><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Model_Estimation/OLS/OLS.html" class="nav-list-link">Ordinary Least Squares</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Model_Estimation/OLS/ANOVA.html" class="nav-list-link">ANOVA</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/OLS/simple_linear_regression.html" class="nav-list-link">Simple Linear Regression</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/OLS/stepwise_regression.html" class="nav-list-link">Stepwise Regression</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/OLS/interaction_terms_and_polynomials.html" class="nav-list-link">Interaction Terms and Polynomials</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/OLS/fixed_effects_in_linear_regression.html" class="nav-list-link">Fixed Effects in Linear Regression</a>
-                      </li></ul></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Model_Estimation/Matching/matching.html" class="nav-list-link">Matching</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Matching/entropy_balancing.html" class="nav-list-link">Entropy Balancing</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Matching/propensity_score_matching.html" class="nav-list-link">Propensity Score Matching</a>
-                      </li></ul></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Model_Estimation/GLS/GLS.html" class="nav-list-link">Generalised Least Squares</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Model_Estimation/GLS/gmm.html" class="nav-list-link">Generalized Method of Moments</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/GLS/heckman_correction_model.html" class="nav-list-link">Heckman Correction Model</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/GLS/logit_model.html" class="nav-list-link">Logit Model</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/GLS/mcfaddens_choice_model.html" class="nav-list-link">McFadden's Choice Model (Alternative-Specific Conditional Logit)</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/GLS/ordered_probit_logit.html" class="nav-list-link">Ordered Probit/Logit</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/GLS/probit_model.html" class="nav-list-link">Probit Model</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/GLS/tobit.html" class="nav-list-link">Tobit Regression</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/GLS/quantile_regression.html" class="nav-list-link">Quantile Regression</a>
-                      </li></ul></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Model_Estimation/Multilevel_Models/Multilevel_Models.html" class="nav-list-link">Multilevel Models</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Multilevel_Models/linear_mixed_effects_regression.html" class="nav-list-link">Linear Mixed-Effects Regression</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Multilevel_Models/mixed_logit.html" class="nav-list-link">Mixed Logit Model</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Multilevel_Models/random_mixed_effects_estimation.html" class="nav-list-link">Random/Mixed Effects in Linear Regression</a>
-                      </li></ul></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Model_Estimation/Research_Design/Research_Design.html" class="nav-list-link">Research Design</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Research_Design/density_discontinuity_test.html" class="nav-list-link">Density Discontinuity Tests for Regression Discontinuity</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Research_Design/event_study.html" class="nav-list-link">Difference in Differences Event Study</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Research_Design/instrumental_variables.html" class="nav-list-link">Instrumental Variables</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Research_Design/regression_discontinuity_design.html" class="nav-list-link">Regression Discontinuity Design</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Research_Design/synthetic_control_method.html" class="nav-list-link">Synthetic Control</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Research_Design/two_by_two_difference_in_difference.html" class="nav-list-link">2x2 Difference in Difference</a>
-                      </li></ul></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Model_Estimation/Statistical_Inference/Statistical_Inference.html" class="nav-list-link">Statistical Inference</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Statistical_Inference/Marginal_Effects_in_Nonlinear_Regression.html" class="nav-list-link">Marginal Effects in Nonlinear Regression</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Statistical_Inference/linear_hypothesis_tests.html" class="nav-list-link">Linear Hypothesis Tests</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Statistical_Inference/nonlinear_hypothesis_tests.html" class="nav-list-link">Nonlinear Hypothesis Tests</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Model_Estimation/Statistical_Inference/Nonstandard_Errors/nonstandard_errors.html" class="nav-list-link">Nonstandard Errors</a>
-                      </li></ul></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Presentation/Presentation.html" class="nav-list-link">Presentation</a><ul class="nav-list "><li class="nav-list-item  active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Presentation/Figures/Figures.html" class="nav-list-link">Figures</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/Adding_and_Labeling_a_Reference_Line.html" class="nav-list-link">Adding and Labeling a Reference Line</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/Animated_graphs.html" class="nav-list-link">Animated Graphs</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/Scatterplots.html" class="nav-list-link">Scatterplots</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/Styling_Scatterplots.html" class="nav-list-link">Styling Scatterplots</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/bar_graphs.html" class="nav-list-link">Bar Graphs</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/binscatter.html" class="nav-list-link">Binned Scatterplots</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/color_palettes.html" class="nav-list-link">Color Palettes</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/density_plots.html" class="nav-list-link">Density Plots</a>
-                      </li><li class="nav-list-item  active">
-                        <a href="/Presentation/Figures/faceted_graphs.html" class="nav-list-link active">Faceted Graphs</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/formatting_graph_axes.html" class="nav-list-link">Formatting Graph Axes</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/formatting_graph_legends.html" class="nav-list-link">Formatting Graph Legends</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/graph_themes.html" class="nav-list-link">Graph Themes</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/heatmap_colored_correlation_matrix.html" class="nav-list-link">Heatmap Colored Correlation Matrix</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/histograms.html" class="nav-list-link">Histograms</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/line_graph_with_labels_at_the_beginning_or_end.html" class="nav-list-link">Line Graph with Labels at the Beginning or End of Lines</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/line_graphs.html" class="nav-list-link">Line Graphs</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/marginal_effects_plots_for_interactions_with_categorical_variables.html" class="nav-list-link">Marginal effects plots for interactions with categorical variables</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/marginal_effects_plots_for_interactions_with_continuous_variables.html" class="nav-list-link">Marginal Effects Plots for Interactions with Continuous Variables</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/sankey_diagrams.html" class="nav-list-link">Sankey Diagrams</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/scatterplot_by_group_on_shared_axes.html" class="nav-list-link">Scatterplot by Group on Shared Axes</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/styling_line_graphs.html" class="nav-list-link">Styling Line Graphs</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Figures/summary_graphs.html" class="nav-list-link">Graphing a By-Group or Over-Time Summary Statistic</a>
-                      </li></ul></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Presentation/Tables/Tables.html" class="nav-list-link">Tables</a><ul class="nav-list"><li class="nav-list-item ">
-                        <a href="/Presentation/Tables/Balance_Tables.html" class="nav-list-link">Balance Tables</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Tables/Correlation_Matrix.html" class="nav-list-link">Correlation Matrix</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Tables/Cross-Tabulation.html" class="nav-list-link">Cross-Tabulation</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Tables/Custom_Tables.html" class="nav-list-link">Building Custom Tables</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Tables/Regression_Tables.html" class="nav-list-link">Regression Tables</a>
-                      </li><li class="nav-list-item ">
-                        <a href="/Presentation/Tables/Summary_Statistics_Tables.html" class="nav-list-link">Summary Statistics Tables</a>
-                      </li></ul></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Time_Series/Time_Series.html" class="nav-list-link">Time Series</a><ul class="nav-list "><li class="nav-list-item "><a href="/Time_Series/AR-models.html" class="nav-list-link">AR Models</a></li><li class="nav-list-item "><a href="/Time_Series/ARCH_Model.html" class="nav-list-link">ARCH Model</a></li><li class="nav-list-item "><a href="/Time_Series/ARIMA-models.html" class="nav-list-link">ARIMA Models</a></li><li class="nav-list-item "><a href="/Time_Series/ARMA-models.html" class="nav-list-link">ARMA Models</a></li><li class="nav-list-item "><a href="/Time_Series/Autocorrelation_Function.html" class="nav-list-link">Autocorrelation Function</a></li><li class="nav-list-item "><a href="/Time_Series/GARCH_Model.html" class="nav-list-link">GARCH Model</a></li><li class="nav-list-item "><a href="/Time_Series/Granger_Causality.html" class="nav-list-link">Granger Causality</a></li><li class="nav-list-item "><a href="/Time_Series/MA_Model.html" class="nav-list-link">MA Models</a></li><li class="nav-list-item "><a href="/Time_Series/Rolling_Regression.html" class="nav-list-link">Rolling Regression</a></li><li class="nav-list-item "><a href="/Time_Series/State_Space_Models.html" class="nav-list-link">State Space Models</a></li><li class="nav-list-item "><a href="/Time_Series/VAR-models.html" class="nav-list-link">VAR Models</a></li><li class="nav-list-item "><a href="/Time_Series/creating_time_series_dataset.html" class="nav-list-link">Creating a Time Series Dataset</a></li></ul></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="/Other/Other.html" class="nav-list-link">Other</a><ul class="nav-list "><li class="nav-list-item "><a href="/Other/create_a_conda_package.html" class="nav-list-link">Create a Conda Package (Python)</a></li><li class="nav-list-item "><a href="/Other/get_a_list_of_files.html" class="nav-list-link">Get a List of Files</a></li><li class="nav-list-item "><a href="/Other/import_a_foreign_data_file.html" class="nav-list-link">Import a Foreign Data File</a></li><li class="nav-list-item "><a href="/Other/importing_delimited_files.html" class="nav-list-link">Import a Delimited Data File (CSV, TSV)</a></li><li class="nav-list-item "><a href="/Other/set_a_working_directory.html" class="nav-list-link">Set a Working Directory</a></li><li class="nav-list-item "><a href="/Other/simple_web_scrape.html" class="nav-list-link">Simple Web Scraping</a></li><li class="nav-list-item "><a href="/Other/task_scheduling_with_github_actions.html" class="nav-list-link">Task Scheduling with Github Actions</a></li></ul></li><li class="nav-list-item"><a href="/Desired_Nonexistent_Pages/desired_nonexistent_pages.html" class="nav-list-link">Desired Nonexistent Pages</a></li><li class="nav-list-item"><a href="/Contributing/Contributing.html" class="nav-list-link">Contributing</a></li><li class="nav-list-item"><a href="/" class="nav-list-link">Home</a></li></ul>
-    </nav>
-    <footer class="site-footer">
-      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-    </footer>
+    <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+    </button>
   </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    <ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Data Manipulation category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Data_Manipulation/data_manipulation.html" class="nav-list-link">Data Manipulation</a><ul class="nav-list"><li class="nav-list-item"><a href="/Data_Manipulation/Regular_Expressions.html" class="nav-list-link">Regular Expressions</a></li><li class="nav-list-item"><a href="/Data_Manipulation/collapse_a_data_set.html" class="nav-list-link">Collapse a Data Set</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Combining Datasets category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Data_Manipulation/Combining_Datasets/combining_datasets_overview.html" class="nav-list-link">Combining Datasets</a><ul class="nav-list"><li class="nav-list-item"><a href="/Data_Manipulation/Combining_Datasets/combining_datasets_vertical_combination.html" class="nav-list-link">Vertical Combination</a></li><li class="nav-list-item"><a href="/Data_Manipulation/Combining_Datasets/combining_datasets_horizontal_merge_deterministic.html" class="nav-list-link">Horizontal Combination (Deterministic)</a></li></ul></li><li class="nav-list-item"><a href="/Data_Manipulation/creating_a_variable_with_group_calculations.html" class="nav-list-link">Creating a Variable with Group Calculations</a></li><li class="nav-list-item"><a href="/Data_Manipulation/creating_categorical_variables.html" class="nav-list-link">Creating Categorical Variables</a></li><li class="nav-list-item"><a href="/Data_Manipulation/Creating_Dummy_Variables/creating_dummy_variables.html" class="nav-list-link">Creating Dummy Variables</a></li><li class="nav-list-item"><a href="/Data_Manipulation/determine_the_observation_level_of_a_data_set.html" class="nav-list-link">Determine the Observation Level of a Data Set</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Reshaping Data category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Data_Manipulation/Reshaping/reshape.html" class="nav-list-link">Reshaping Data</a><ul class="nav-list"><li class="nav-list-item"><a href="/Data_Manipulation/Reshaping/reshape_panel_data_from_wide_to_long.html" class="nav-list-link">Reshape Panel Data from Wide to Long</a></li><li class="nav-list-item"><a href="/Data_Manipulation/Reshaping/reshape_panel_data_from_long_to_wide.html" class="nav-list-link">Reshape Panel Data from Long to Wide</a></li></ul></li><li class="nav-list-item"><a href="/Data_Manipulation/rowwise_calculations.html" class="nav-list-link">Rowwise Calculations</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Geo-Spatial category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Geo-Spatial/Geo-spatial.html" class="nav-list-link">Geo-Spatial</a><ul class="nav-list"><li class="nav-list-item"><a href="/Geo-Spatial/choropleths.html" class="nav-list-link">Choropleths</a></li><li class="nav-list-item"><a href="/Geo-Spatial/geocoding.html" class="nav-list-link">Geocoding</a></li><li class="nav-list-item"><a href="/Geo-Spatial/handling_raster_data.html" class="nav-list-link">Handling Raster Data</a></li><li class="nav-list-item"><a href="/Geo-Spatial/merging_shape_files.html" class="nav-list-link">Merging Shape Files</a></li><li class="nav-list-item"><a href="/Geo-Spatial/spatial_joins.html" class="nav-list-link">Spatial Joins</a></li><li class="nav-list-item"><a href="/Geo-Spatial/spatial_lag_model.html" class="nav-list-link">Spatial Lag Model</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Machine Learning category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Machine_Learning/Machine_Learning.html" class="nav-list-link">Machine Learning</a><ul class="nav-list"><li class="nav-list-item"><a href="/Machine_Learning/Nearest_Neighbor.html" class="nav-list-link">K-Nearest Neighbor Matching</a></li><li class="nav-list-item"><a href="/Machine_Learning/artificial_neural_network.html" class="nav-list-link">Artificial Neural Network</a></li><li class="nav-list-item"><a href="/Machine_Learning/boosted_regression_trees.html" class="nav-list-link">Boosted Regression Trees</a></li><li class="nav-list-item"><a href="/Machine_Learning/causal_forest.html" class="nav-list-link">Causal Forest</a></li><li class="nav-list-item"><a href="/Machine_Learning/decision_trees.html" class="nav-list-link">Decision Trees</a></li><li class="nav-list-item"><a href="/Machine_Learning/penalized_regression.html" class="nav-list-link">Penalized Regression</a></li><li class="nav-list-item"><a href="/Machine_Learning/random_forest.html" class="nav-list-link">Random Forest</a></li><li class="nav-list-item"><a href="/Machine_Learning/support_vector_machine.html" class="nav-list-link">Support Vector Machine</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Model Estimation category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Model_Estimation/Model_Estimation.html" class="nav-list-link">Model Estimation</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Ordinary Least Squares category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Model_Estimation/OLS/OLS.html" class="nav-list-link">Ordinary Least Squares</a><ul class="nav-list"><li class="nav-list-item"><a href="/Model_Estimation/OLS/ANOVA.html" class="nav-list-link">ANOVA</a></li><li class="nav-list-item"><a href="/Model_Estimation/OLS/simple_linear_regression.html" class="nav-list-link">Simple Linear Regression</a></li><li class="nav-list-item"><a href="/Model_Estimation/OLS/stepwise_regression.html" class="nav-list-link">Stepwise Regression</a></li><li class="nav-list-item"><a href="/Model_Estimation/OLS/interaction_terms_and_polynomials.html" class="nav-list-link">Interaction Terms and Polynomials</a></li><li class="nav-list-item"><a href="/Model_Estimation/OLS/fixed_effects_in_linear_regression.html" class="nav-list-link">Fixed Effects in Linear Regression</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Matching category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Model_Estimation/Matching/matching.html" class="nav-list-link">Matching</a><ul class="nav-list"><li class="nav-list-item"><a href="/Model_Estimation/Matching/entropy_balancing.html" class="nav-list-link">Entropy Balancing</a></li><li class="nav-list-item"><a href="/Model_Estimation/Matching/propensity_score_matching.html" class="nav-list-link">Propensity Score Matching</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Generalised Least Squares category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Model_Estimation/GLS/GLS.html" class="nav-list-link">Generalised Least Squares</a><ul class="nav-list"><li class="nav-list-item"><a href="/Model_Estimation/GLS/gmm.html" class="nav-list-link">Generalized Method of Moments</a></li><li class="nav-list-item"><a href="/Model_Estimation/GLS/heckman_correction_model.html" class="nav-list-link">Heckman Correction Model</a></li><li class="nav-list-item"><a href="/Model_Estimation/GLS/logit_model.html" class="nav-list-link">Logit Model</a></li><li class="nav-list-item"><a href="/Model_Estimation/GLS/mcfaddens_choice_model.html" class="nav-list-link">McFadden's Choice Model (Alternative-Specific Conditional Logit)</a></li><li class="nav-list-item"><a href="/Model_Estimation/GLS/nested_logit.html" class="nav-list-link">Nested Logit Model</a></li><li class="nav-list-item"><a href="/Model_Estimation/GLS/ordered_probit_logit.html" class="nav-list-link">Ordered Probit/Logit</a></li><li class="nav-list-item"><a href="/Model_Estimation/GLS/probit_model.html" class="nav-list-link">Probit Model</a></li><li class="nav-list-item"><a href="/Model_Estimation/GLS/tobit.html" class="nav-list-link">Tobit Regression</a></li><li class="nav-list-item"><a href="/Model_Estimation/GLS/quantile_regression.html" class="nav-list-link">Quantile Regression</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Multilevel Models category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Model_Estimation/Multilevel_Models/Multilevel_Models.html" class="nav-list-link">Multilevel Models</a><ul class="nav-list"><li class="nav-list-item"><a href="/Model_Estimation/Multilevel_Models/linear_mixed_effects_regression.html" class="nav-list-link">Linear Mixed-Effects Regression</a></li><li class="nav-list-item"><a href="/Model_Estimation/Multilevel_Models/mixed_logit.html" class="nav-list-link">Mixed Logit Model</a></li><li class="nav-list-item"><a href="/Model_Estimation/Multilevel_Models/random_mixed_effects_estimation.html" class="nav-list-link">Random/Mixed Effects in Linear Regression</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Research Design category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Model_Estimation/Research_Design/Research_Design.html" class="nav-list-link">Research Design</a><ul class="nav-list"><li class="nav-list-item"><a href="/Model_Estimation/Research_Design/density_discontinuity_test.html" class="nav-list-link">Density Discontinuity Tests for Regression Discontinuity</a></li><li class="nav-list-item"><a href="/Model_Estimation/Research_Design/event_study.html" class="nav-list-link">Difference in Differences Event Study</a></li><li class="nav-list-item"><a href="/Model_Estimation/Research_Design/instrumental_variables.html" class="nav-list-link">Instrumental Variables</a></li><li class="nav-list-item"><a href="/Model_Estimation/Research_Design/regression_discontinuity_design.html" class="nav-list-link">Regression Discontinuity Design</a></li><li class="nav-list-item"><a href="/Model_Estimation/Research_Design/synthetic_control_method.html" class="nav-list-link">Synthetic Control</a></li><li class="nav-list-item"><a href="/Model_Estimation/Research_Design/two_by_two_difference_in_difference.html" class="nav-list-link">2x2 Difference in Difference</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Statistical Inference category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Model_Estimation/Statistical_Inference/Statistical_Inference.html" class="nav-list-link">Statistical Inference</a><ul class="nav-list"><li class="nav-list-item"><a href="/Model_Estimation/Statistical_Inference/Marginal_Effects_in_Nonlinear_Regression.html" class="nav-list-link">Marginal Effects in Nonlinear Regression</a></li><li class="nav-list-item"><a href="/Model_Estimation/Statistical_Inference/linear_hypothesis_tests.html" class="nav-list-link">Linear Hypothesis Tests</a></li><li class="nav-list-item"><a href="/Model_Estimation/Statistical_Inference/nonlinear_hypothesis_tests.html" class="nav-list-link">Nonlinear Hypothesis Tests</a></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Nonstandard Errors category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Model_Estimation/Statistical_Inference/Nonstandard_Errors/nonstandard_errors.html" class="nav-list-link">Nonstandard Errors</a><ul class="nav-list"><li class="nav-list-item"><a href="/Model_Estimation/Statistical_Inference/Nonstandard_Errors/bootstrap_se.html" class="nav-list-link">Bootstrap Standard Errors</a></li><li class="nav-list-item"><a href="/Model_Estimation/Statistical_Inference/Nonstandard_Errors/clustered_se.html" class="nav-list-link">Cluster-Robust Standard Errors</a></li><li class="nav-list-item"><a href="/Model_Estimation/Statistical_Inference/Nonstandard_Errors/hc_se.html" class="nav-list-link">Heteroskedasticity-consistent standard errors</a></li></ul></li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Presentation category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Presentation/Presentation.html" class="nav-list-link">Presentation</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Figures category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Presentation/Figures/Figures.html" class="nav-list-link">Figures</a><ul class="nav-list"><li class="nav-list-item"><a href="/Presentation/Figures/Adding_and_Labeling_a_Reference_Line.html" class="nav-list-link">Adding and Labeling a Reference Line</a></li><li class="nav-list-item"><a href="/Presentation/Figures/Animated_graphs.html" class="nav-list-link">Animated Graphs</a></li><li class="nav-list-item"><a href="/Presentation/Figures/Graph_Annotation.html" class="nav-list-link">Graph Annotations</a></li><li class="nav-list-item"><a href="/Presentation/Figures/Scatterplots.html" class="nav-list-link">Scatterplots</a></li><li class="nav-list-item"><a href="/Presentation/Figures/Styling_Scatterplots.html" class="nav-list-link">Styling Scatterplots</a></li><li class="nav-list-item"><a href="/Presentation/Figures/bar_graphs.html" class="nav-list-link">Bar Graphs</a></li><li class="nav-list-item"><a href="/Presentation/Figures/binscatter.html" class="nav-list-link">Binned Scatterplots</a></li><li class="nav-list-item"><a href="/Presentation/Figures/color_palettes.html" class="nav-list-link">Color Palettes</a></li><li class="nav-list-item"><a href="/Presentation/Figures/density_plots.html" class="nav-list-link">Density Plots</a></li><li class="nav-list-item"><a href="/Presentation/Figures/faceted_graphs.html" class="nav-list-link">Faceted Graphs</a></li><li class="nav-list-item"><a href="/Presentation/Figures/formatting_graph_axes.html" class="nav-list-link">Formatting Graph Axes</a></li><li class="nav-list-item"><a href="/Presentation/Figures/formatting_graph_legends.html" class="nav-list-link">Formatting Graph Legends</a></li><li class="nav-list-item"><a href="/Presentation/Figures/graph_themes.html" class="nav-list-link">Graph Themes</a></li><li class="nav-list-item"><a href="/Presentation/Figures/heatmap_colored_correlation_matrix.html" class="nav-list-link">Heatmap Colored Correlation Matrix</a></li><li class="nav-list-item"><a href="/Presentation/Figures/histograms.html" class="nav-list-link">Histograms</a></li><li class="nav-list-item"><a href="/Presentation/Figures/line_graph_with_labels_at_the_beginning_or_end.html" class="nav-list-link">Line Graph with Labels at the Beginning or End of Lines</a></li><li class="nav-list-item"><a href="/Presentation/Figures/line_graphs.html" class="nav-list-link">Line Graphs</a></li><li class="nav-list-item"><a href="/Presentation/Figures/marginal_effects_plots_for_interactions_with_categorical_variables.html" class="nav-list-link">Marginal effects plots for interactions with categorical variables</a></li><li class="nav-list-item"><a href="/Presentation/Figures/marginal_effects_plots_for_interactions_with_continuous_variables.html" class="nav-list-link">Marginal Effects Plots for Interactions with Continuous Variables</a></li><li class="nav-list-item"><a href="/Presentation/Figures/sankey_diagrams.html" class="nav-list-link">Sankey Diagrams</a></li><li class="nav-list-item"><a href="/Presentation/Figures/scatterplot_by_group_on_shared_axes.html" class="nav-list-link">Scatterplot by Group on Shared Axes</a></li><li class="nav-list-item"><a href="/Presentation/Figures/styling_line_graphs.html" class="nav-list-link">Styling Line Graphs</a></li><li class="nav-list-item"><a href="/Presentation/Figures/summary_graphs.html" class="nav-list-link">Graphing a By-Group or Over-Time Summary Statistic</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Tables category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Presentation/Tables/Tables.html" class="nav-list-link">Tables</a><ul class="nav-list"><li class="nav-list-item"><a href="/Presentation/Tables/Balance_Tables.html" class="nav-list-link">Balance Tables</a></li><li class="nav-list-item"><a href="/Presentation/Tables/Correlation_Matrix.html" class="nav-list-link">Correlation Matrix</a></li><li class="nav-list-item"><a href="/Presentation/Tables/Cross-Tabulation.html" class="nav-list-link">Cross-Tabulation</a></li><li class="nav-list-item"><a href="/Presentation/Tables/Custom_Tables.html" class="nav-list-link">Building Custom Tables</a></li><li class="nav-list-item"><a href="/Presentation/Tables/Regression_Tables.html" class="nav-list-link">Regression Tables</a></li><li class="nav-list-item"><a href="/Presentation/Tables/Summary_Statistics_Tables.html" class="nav-list-link">Summary Statistics Tables</a></li></ul></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Time Series category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Time_Series/Time_Series.html" class="nav-list-link">Time Series</a><ul class="nav-list"><li class="nav-list-item"><a href="/Time_Series/AR-models.html" class="nav-list-link">AR Models</a></li><li class="nav-list-item"><a href="/Time_Series/ARCH_Model.html" class="nav-list-link">ARCH Model</a></li><li class="nav-list-item"><a href="/Time_Series/ARIMA-models.html" class="nav-list-link">ARIMA Models</a></li><li class="nav-list-item"><a href="/Time_Series/ARMA-models.html" class="nav-list-link">ARMA Models</a></li><li class="nav-list-item"><a href="/Time_Series/Autocorrelation_Function.html" class="nav-list-link">Autocorrelation Function</a></li><li class="nav-list-item"><a href="/Time_Series/GARCH_Model.html" class="nav-list-link">GARCH Model</a></li><li class="nav-list-item"><a href="/Time_Series/Granger_Causality.html" class="nav-list-link">Granger Causality</a></li><li class="nav-list-item"><a href="/Time_Series/MA_Model.html" class="nav-list-link">MA Models</a></li><li class="nav-list-item"><a href="/Time_Series/Rolling_Regression.html" class="nav-list-link">Rolling Regression</a></li><li class="nav-list-item"><a href="/Time_Series/State_Space_Models.html" class="nav-list-link">State Space Models</a></li><li class="nav-list-item"><a href="/Time_Series/VAR-models.html" class="nav-list-link">VAR Models</a></li><li class="nav-list-item"><a href="/Time_Series/creating_time_series_dataset.html" class="nav-list-link">Creating a Time Series Dataset</a></li></ul></li><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Other category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button><a href="/Other/Other.html" class="nav-list-link">Other</a><ul class="nav-list"><li class="nav-list-item"><a href="/Other/create_a_conda_package.html" class="nav-list-link">Create a Conda Package (Python)</a></li><li class="nav-list-item"><a href="/Other/get_a_list_of_files.html" class="nav-list-link">Get a List of Files</a></li><li class="nav-list-item"><a href="/Other/import_a_foreign_data_file.html" class="nav-list-link">Import a Foreign Data File</a></li><li class="nav-list-item"><a href="/Other/importing_delimited_files.html" class="nav-list-link">Import a Delimited Data File (CSV, TSV)</a></li><li class="nav-list-item"><a href="/Other/set_a_working_directory.html" class="nav-list-link">Set a Working Directory</a></li><li class="nav-list-item"><a href="/Other/simple_web_scrape.html" class="nav-list-link">Simple Web Scraping</a></li><li class="nav-list-item"><a href="/Other/task_scheduling_with_github_actions.html" class="nav-list-link">Task Scheduling with Github Actions</a></li></ul></li><li class="nav-list-item"><a href="/Desired_Nonexistent_Pages/desired_nonexistent_pages.html" class="nav-list-link">Desired Nonexistent Pages</a></li><li class="nav-list-item"><a href="/Contributing/Contributing.html" class="nav-list-link">Contributing</a></li><li class="nav-list-item"><a href="/" class="nav-list-link">Home</a></li></ul>
+</nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+</div>
   <div class="main" id="top">
     <div id="main-header" class="main-header">
-        <div class="search">
-          <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search LOST" aria-label="Search LOST" autocomplete="off">
-            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
-          </div>
-          <div id="search-results" class="search-results"></div>
-        </div>
-    </div>
-    <div id="main-content-wrap" class="main-content-wrap">
-          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list">
-                <li class="breadcrumb-nav-list-item"><a href="/Presentation/Presentation.html">Presentation</a></li>
-                <li class="breadcrumb-nav-list-item"><a href="/Presentation/Figures/Figures.html">Figures</a></li>
-              <li class="breadcrumb-nav-list-item"><span>Faceted Graphs</span></li>
-            </ol>
-          </nav>
-      <div id="main-content" class="main-content" role="main">
-          <h1 id="faceted-graphs">
-          <a href="#faceted-graphs" aria-labelledby="faceted-graphs" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Faceted Graphs
-      </h1>
+<div class="search" role="search">
+  <div class="search-input-wrap">
+    <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search LOST" aria-label="Search LOST" autocomplete="off">
+    <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
+  </div>
+  <div id="search-results" class="search-results"></div>
+</div>
+</div>
+    <div class="main-content-wrap">
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    <li class="breadcrumb-nav-list-item"><a href="/Presentation/Presentation.html">Presentation</a></li>
+    <li class="breadcrumb-nav-list-item"><a href="/Presentation/Figures/Figures.html">Figures</a></li>
+    <li class="breadcrumb-nav-list-item"><span>Faceted Graphs</span></li>
+  </ol>
+</nav>
+      <div id="main-content" class="main-content">
+        <main>
+            <h1 id="faceted-graphs">
+    <a href="#faceted-graphs" class="anchor-heading" aria-labelledby="faceted-graphs"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Faceted Graphs
+</h1>
 <p>When plotting relationship among variables of interest, one of the useful ways to create visual impact is by way of using facet, which subsets data with faceted variable and creates plots for each of the subset seperately. The result is a panel of subplots, with each subplot depicting the plot for same set of variables. This approach can be especially useful for panel datasets, with the panel variable acting as facet variable and each subplot depicting time series trend of variable of interest.</p>
-      <h2 id="keep-in-mind">
-          <a href="#keep-in-mind" aria-labelledby="keep-in-mind" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Keep in Mind
-      </h2>
+<h2 id="keep-in-mind">
+    <a href="#keep-in-mind" class="anchor-heading" aria-labelledby="keep-in-mind"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Keep in Mind
+</h2>
 <ul>
   <li>It is important to use a categorical (discrete) variable as a facet variable for creating faceted graphs.</li>
   <li>Plotting libraries generally fall into two broad camps: <em>imperative</em> (specify all of the steps to get the desired outcome) or <em>declarative</em> (specify the desired outcome without the steps). Imperative plotting gives more control and some people may find each step clearer to read, but it can also be fiddly and cumbersome, especially with simple plots. Declarative plotting trades away control in favour of tried and tested processes that can quickly produce standardised charts, but the specialised syntax can be a barrier for newcomers. Facets are available in both types, but the code to produce them will look quite different.</li>
 </ul>
-      <h2 id="also-consider">
-          <a href="#also-consider" aria-labelledby="also-consider" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Also Consider
-      </h2>
+<h2 id="also-consider">
+    <a href="#also-consider" class="anchor-heading" aria-labelledby="also-consider"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Also Consider
+</h2>
 <ul>
   <li>It is important to know the basic plotting techniques such as <a href="/Presentation/Figures/bar_graphs.html">Bar Graphs</a>, <a href="/Presentation/Figures/line_graph_with_labels_at_the_beginning_or_end.html">Line Graphs</a> and <a href="/Presentation/Figures/scatterplot_by_group_on_shared_axes.html">Scatterplot</a> before learning about faceted graphs as the facets are an addition to the underlying plot such as bar graph, line graph, scatterplot etc.</li>
 </ul>
-      <h1 id="implementations">
-          <a href="#implementations" aria-labelledby="implementations" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Implementations
-      </h1>
-      <h2 id="python">
-          <a href="#python" aria-labelledby="python" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Python
-      </h2>
+<h1 id="implementations">
+    <a href="#implementations" class="anchor-heading" aria-labelledby="implementations"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Implementations
+</h1>
+<h2 id="python">
+    <a href="#python" class="anchor-heading" aria-labelledby="python"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Python
+</h2>
 <p>Python has both imperative and declarative plotting libraries, and many of them have support for faceted graphs. In the example below, we’ll look at three libraries: two declarative, <a href="https://seaborn.pydata.org/index.html"><strong>seaborn</strong></a> and <a href="https://plotnine.readthedocs.io/en/stable/index.html"><strong>plotnine</strong></a>, and one imperative, <a href="https://matplotlib.org/"><strong>matplotlib</strong></a>. The imperative library <strong>matplotlib</strong> is by far the most popular plotting tool in Python, having been used as part of efforts to detect <a href="https://www.gw-openscience.org/s/events/GW150914/GW150914_tutorial.html">gravitational waves</a> and produce the <a href="https://numpy.org/case-studies/blackhole-image/">first image of a black hole</a>. Often, other libraries build upon it as a foundation. For plots that will be shown on the web, the declarative library <a href="https://altair-viz.github.io/"><strong>altair</strong></a> has very good facet support.</p>
 <p>Because <strong>matplotlib</strong> is imperative, it takes more effort by the user to produce a simple facet chart. So the first example below will use <strong>seaborn</strong>, a declarative library that builds on <strong>matplotlib</strong>. We’ll use it to produce a plot from the Penguins dataset, with a facet for each island. As ever, you may need to conda or pip install the libraries used in the examples.</p>
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="n">sns</span>
@@ -286,9 +249,9 @@
 </code></pre></div></div>
 <p>Results in:</p>
 <p><img src="https://github.com/LOST-STATS/LOST-STATS.github.io/raw/master/Presentation/Figures/Images/Faceted_Graphs/matplotlib_advanced_facet.png" alt="Faceted graph_advanced" /></p>
-      <h2 id="r">
-          <a href="#r" aria-labelledby="r" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> R
-      </h2>
+<h2 id="r">
+    <a href="#r" class="anchor-heading" aria-labelledby="r"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> R
+</h2>
 <p>Implementation of faceted graph in R explained below is taken from online book <a href="https://r4ds.had.co.nz/data-visualisation.html#facets">R for Data Science</a> by Hadley Wickham and Garett Grolemund. The book is also an excellent source for various data visualization techniques in R and learning R in general.</p>
 <p>We will use <strong>tidyverse</strong> package available in R for faceted graphs. <strong>Tidyverse</strong> is actually a meta-package which has various packages, and we will use <strong>ggplot2</strong> package for our purpose. This package has a data frame (it is like a table in R), called ‘mpg’ which contains observations collected by the US Environmental Protection Agency on 38 models of car.</p>
 <p>To create faceted graph, use <code class="language-plaintext highlighter-rouge">facet_wrap()</code> option in ggplot. The argument inside the bracket is <code class="language-plaintext highlighter-rouge">~</code> sign follwed by the categorical variable to be used to create subsets of data. Its use is illustrated in the code given below.</p>
@@ -311,26 +274,27 @@
 </span></code></pre></div></div>
 <p>The code reults in the follwing panel of subplots:
 <img src="https://github.com/LOST-STATS/LOST-STATS.github.io/raw/master/Presentation/Figures/Images/Faceted_Graphs/faceted_graph_two_variables.png" alt="Faceted graph with two variables" /></p>
-      <h2 id="stata">
-          <a href="#stata" aria-labelledby="stata" class="anchor-heading"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Stata
-      </h2>
+<h2 id="stata">
+    <a href="#stata" class="anchor-heading" aria-labelledby="stata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Stata
+</h2>
 <p>In stata, faceted graph can be created by using option <code class="language-plaintext highlighter-rouge">by()</code> and mentioning the faceted variable in the bracket. Let’s see an example of the same . Let’s access pre-installed dataset in Stata, called ‘auto.dta’ which has 1978 automobile data. The following code generates scatterplot with ‘length of car’ on x-axis, ‘mileage of car’ on y-axis and variable ‘foreign’ (whether the car is manufactured domestically or imported) used to create subsets of data. <code class="language-plaintext highlighter-rouge">sysuse auto</code> is used to load the table ‘auto.dta’.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sysuse auto
 twoway (scatter mpg length), by(foreign)
 </code></pre></div></div>
 <p>The code generates the following graph:
 <img src="https://github.com/LOST-STATS/LOST-STATS.github.io/raw/master/Presentation/Figures/Images/Faceted_Graphs/stata_faceted_graph.png" alt="Faceted Graph by Origin of Car" /></p>
-          <hr>
-          <footer>
-              <div class="d-flex mt-2">
-                  <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="https://github.com/lost-stats/lost-stats.github.io/edit/source/Presentation/Figures/faceted_graphs.md" id="edit-this-page">Edit this page on GitHub.</a>
-                  </p>
-              </div>
-          </footer>
+        </main>
+  <hr>
+  <footer>
+      <div class="d-flex mt-2">
+          <p class="text-small text-grey-dk-000 mb-0">
+            <a href="https://github.com/lost-stats/lost-stats.github.io/edit/source/Presentation/Figures/faceted_graphs.md" id="edit-this-page">Edit this page on GitHub.</a>
+          </p>
+      </div>
+  </footer>
       </div>
     </div>
-      <div class="search-overlay"></div>
+<div class="search-overlay"></div>
   </div>
 </body>
 </html>
