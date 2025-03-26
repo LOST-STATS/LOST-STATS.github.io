@@ -141,7 +141,7 @@ cd $LOCAL_REPO_DIR
 rm -rf recipes/example recipes/spyrmsd
 ```
 
-Then in the `.circleci/build_steps.sh` file, comment out the line that starts `git ls-tree --name-only master -- .`.
+Then in the `.circleci/build_steps.sh` file, comment out the line that starts `git ls-tree --name-only main -- .`.
 
 Then you should be able to run `./.circleci/run_docker_build.sh`. You'll probably see some errors which you'll need to fix.
 
